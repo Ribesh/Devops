@@ -89,11 +89,13 @@ kubectl create -f <........yml>
 List the Replica Set
 ```bash
 kubectl get replicaset
+kubectl get rs
 ```
 
 Delete the Replica Set
 ```bash
 kubectl delete replicaset myapp-replicaset      # Also deletes all underlying pods
+kubectl delete rs myapp-replicaset
 ```
 
 Replace/Update
@@ -104,9 +106,20 @@ kubectl replace -f <...yml>
 Describe
 ```bash
 kubectl describe replicaset myapp-replicaset
+kubectl describe rs myapp-replicaset
 ```
 
 Edit in Runtime
 ```bash
 kubectl edit replicaset myapp-replicaset
+kubectl edit rs myapp-replicaset
 ```
+After editing, for the changes to reflect
+1. Either Delete all the pods
+```bash
+kubectl delete pods <pod_1> <pod_2> <pod_3> .....
+kubectl delete po <pod_1> <pod_2>
+```
+
+2. Or, Update the existing Replicaset
+3. Or, Delete and recreate the Replicaset

@@ -34,7 +34,6 @@ spec:
           port: 80              # Service Port
           nodePort: 30008       # User Access Port
     selector:
-        matchLabels:
             app: myapp
             type: front-end
 ```

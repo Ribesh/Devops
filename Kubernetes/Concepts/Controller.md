@@ -28,6 +28,12 @@ spec:
 ```bash
 kubectl create -f rc-definition.yml
 ```
+List Replication Controller
+```bash
+kubectl get replicationcontrollers
+kubectl get rc
+```
+
 
 ##  Replication Set
 Only slight difference betweeen Replication Controller and Replication Set

@@ -17,6 +17,7 @@ kubectl run nginx --image=nginx
 List pods
 ```bash
 kubectl get pods
+kubectl get po
 kubectl get pods -o wide    # Get more info
 ```
 

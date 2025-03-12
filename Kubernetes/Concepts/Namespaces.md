@@ -2,6 +2,13 @@
 
 ![Image](../../images/kubernetes_namespace1.png)
 
+List Namespaces
+```bash
+kubectl get namespaces
+
+kubectl get ns
+```
+
 ```bash
 kubectl get pods --namespace=kube-system
 ```
@@ -26,6 +33,7 @@ spec:
 ## Create Namespace
 ```bash
 kubectl create namespace dev
+kubectl create ns dev
 ```
 ####  OR
 ```bash
@@ -36,12 +44,13 @@ metadata:
 ```
 
 ```bash
-kubectl craete -f namespace-dev.yml
+kubectl create -f namespace-dev.yml
 ```
 
 ## Switch Namespace
 ```bash
 kubectl get pods --namespace=dev
+
 
 kubectl get pods --namespace=prod
 ```
@@ -56,9 +65,17 @@ kubectl config set-context $(kubectl config current-context) --namespace=dev
 
 ```bash
 kubectl get pods --all-namespaces
+kubectl get pods -A
 ```
 
 ![Image](../../images/kubernetes_namespace3.png)
+
+## Create pods in particular Namespace
+```bash
+kubectl run redis --image=redis --namespace finance
+
+kubectl run redis --image=redis -n=finance
+```
 
 ## Allocate Resource Quota for a Namespace
 

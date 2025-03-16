@@ -108,7 +108,7 @@ kubectl run httpd --image=httpd:alpine --port=80 --expose --dry-run=client -o ya
 
 ``` cat httpd.yaml```
 ```bash
-controlplane ~ ➜  cat http-pod.yaml 
+controlplane ~ ➜  cat http.yaml 
 apiVersion: v1
 kind: Service
 metadata:

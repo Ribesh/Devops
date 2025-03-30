@@ -14,6 +14,8 @@ spec:
     containers:
         -   name: nginx-container
             image: nginx
+        -   name: busybox-container
+            image: busybox
 
 ```
 

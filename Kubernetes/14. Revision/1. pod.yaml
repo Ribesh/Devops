@@ -40,7 +40,7 @@ spec:
 
     - name: sidecar-container
       image:  busybox:latest
-      command:  ["/bin/sh", "-c" "while true; do echo Sidecar running; sleep 10; done"]
+      command:  ["/bin/sh", "-c" , "while true do echo Sidecar running; sleep 10; done"]
       env:
         - name: SIDE_CAR_MODE
           value:  "logger"
